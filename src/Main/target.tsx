@@ -1,14 +1,17 @@
 import "./target.scss"
 import { useState,useEffect } from "react";
 import { useNavigate } from 'react-router-dom';
-
+import ITarget from "../Interface/ITarget";
 interface Target {
   cursorAim: () => void,
   cursorDefault: ()=>void,
-  text: String
+  text: String,
+  showOverlay : ()=>void,
+  isOverlayVisible : Boolean,
+  setIsOverlayVisible: (value: any)=>void,
 }
 
-function Target({text,cursorAim,cursorDefault}:Target){
+function Target({text,showOverlay,isOverlayVisible,setIsOverlayVisible,cursorFunctions}:ITarget){
   const navigate = useNavigate();
 
     //randomize left position
@@ -64,13 +67,18 @@ function Target({text,cursorAim,cursorDefault}:Target){
     };
 
    function targetShot(){
+    if(!isOverlayVisible){
+      showOverlay(); 
     setTimeout(()=>{
       navigate("/"+text);
-    },1000);
+    },500);
+    }
+
    }
     
   return(
-    <div onMouseOver={cursorAim} onMouseOut={cursorDefault} onClick={targetShot} className="target" style={targetStyle}>
+    <div onMouseOver={cursorFunctions.cursorAim} onMouseOut={cursorFunctions.cursorDefault} onClick={targetShot} className="target" style={targetStyle}>
+      
         <div id="text">{text}</div>
     </div>
   )
