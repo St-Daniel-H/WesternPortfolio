@@ -6,12 +6,13 @@ function Main({showOverlay,setIsOverlayVisible,isOverlayVisible,cursorFunctions}
    
     return(
         <div id="Main">
+
             <div id="Introduction">
             <h1>Howdy! My name is Daniel</h1>
             <p>Full stack web developer developer</p>
             </div>
-            <Target isOverlayVisible={isOverlayVisible} setIsOverlayVisible={setIsOverlayVisible} showOverlay={showOverlay} text="Work" cursorFunctions={cursorFunctions}/>
-            <Target isOverlayVisible={isOverlayVisible} setIsOverlayVisible={setIsOverlayVisible} showOverlay ={showOverlay} text="Contact" cursorFunctions={cursorFunctions}/>
+            <Target isOverlayVisible={isOverlayVisible} showOverlay={showOverlay} text="Work" cursorFunctions={cursorFunctions}/>
+            <Target isOverlayVisible={isOverlayVisible}  showOverlay ={showOverlay} text="Contact" cursorFunctions={cursorFunctions}/>
         </div>
     )
 

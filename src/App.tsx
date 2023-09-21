@@ -6,6 +6,7 @@ import BlackOverlay from "./BlackOverlay/BlackOverlay";
 import "./App.scss"
 import Cursor from "./Cursor/Cursor.tsx";
 import cursor from "./SCSS/cursorVariable";
+import Navbar from "./Navbar/Navbar.tsx";
 function App() {
   const [isOverlayVisible, setIsOverlayVisible] = useState(false);
 
@@ -57,6 +58,7 @@ function App() {
   <BrowserRouter>
     <Cursor cursorStyle={cursorStyle}/>
     <BlackOverlay isVisible={isOverlayVisible} />
+    <Navbar isOverlayVisible={isOverlayVisible} setIsOverlayVisible={setIsOverlayVisible} showOverlay={showOverlay} cursorFunctions={cursorFunctions}/>
     <Routes>
     <Route index element={<Main isOverlayVisible={isOverlayVisible} setIsOverlayVisible={setIsOverlayVisible} showOverlay={showOverlay} cursorFunctions={cursorFunctions}/>} />
     <Route path="/Work" element={<Work isOverlayVisible={isOverlayVisible} setIsOverlayVisible={setIsOverlayVisible} cursorFunctions={cursorFunctions} showOverlay={showOverlay}/> } />

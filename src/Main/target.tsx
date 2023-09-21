@@ -2,16 +2,8 @@ import "./target.scss"
 import { useState,useEffect } from "react";
 import { useNavigate } from 'react-router-dom';
 import ITarget from "../Interface/ITarget";
-interface Target {
-  cursorAim: () => void,
-  cursorDefault: ()=>void,
-  text: String,
-  showOverlay : ()=>void,
-  isOverlayVisible : Boolean,
-  setIsOverlayVisible: (value: any)=>void,
-}
 
-function Target({text,showOverlay,isOverlayVisible,setIsOverlayVisible,cursorFunctions}:ITarget){
+function Target({text,showOverlay,isOverlayVisible,cursorFunctions}:ITarget){
   const navigate = useNavigate();
 
     //randomize left position

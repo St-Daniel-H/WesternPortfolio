@@ -1,0 +1,42 @@
+#Nav {
+    position: fixed;
+    color: white;
+    height: 40px;
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    background-image: url("../../public/Images/NavbarBG.jpg");
+    background-size: cover;
+    /* Set the image to cover all the div */
+    background-repeat: no-repeat;
+    /* Commonly used for that situation */
+    //background-attachment: fixed;
+
+    -webkit-box-shadow: 5px 7.5px 10px 3px #414141;
+    -moz-box-shadow: 5px 7.5px 10px 3px #414141;
+    box-shadow: 5px 7.5px 10px 3px #414141;
+
+    @media screen and (max-width:500px) {
+        flex-direction: column;
+        height: 60px;
+
+        img {
+            margin: auto;
+        }
+    }
+
+    img {
+        width: 30px;
+        height: 30px;
+    }
+
+    #links {
+        max-width: 300px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+}
