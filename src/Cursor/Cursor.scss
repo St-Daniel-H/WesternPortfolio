@@ -1,0 +1,13 @@
+#Cursor {
+    position: absolute;
+    background-size: cover;
+    /* Set the image to cover all the div */
+    background-repeat: no-repeat;
+    /* Commonly used for that situation */
+    width: 40px;
+    height: 40px;
+    /* Make it a circle */
+    pointer-events: none;
+    /* Allow clicks to pass through */
+    z-index: 1000;
+}

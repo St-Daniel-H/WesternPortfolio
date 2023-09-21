@@ -1,0 +1,21 @@
+@import "../SCSS/cursorVariables.scss";
+
+.target {
+    height: 220px;
+    width: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url("../../public/Images/target.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    // background-attachment: fixed
+    position: absolute;
+    bottom: 0;
+
+    #text {
+        position: absolute;
+        top: 0;
+    }
+
+}
