@@ -1,14 +1,21 @@
 #Work {
     margin-top: 50px;
-    height: 4000px;
-    color: black;
-
+    color: white;
     width: 100%;
+
+    background-image: url("../../public/Images/workBg.jpg");
+    background-size: cover;
+    /* Set the image to cover all the div */
+    background-repeat: no-repeat;
+    /* Commonly used for that situation */
+    background-attachment: fixed;
 
     #deckContainer {
         display: flex;
         justify-content: center;
         align-items: center;
+        position: 'relative',
+
     }
 
     #contain {

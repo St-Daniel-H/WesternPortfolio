@@ -1,10 +1,35 @@
 .cardMotion {
+    right: 20px;
+    top: 150px;
+    -webkit-box-shadow: 3px 3px 10px 3px #272727;
+    -moz-box-shadow: 3px 3px 10px 3px #272727;
+    box-shadow: 3px 3px 10px 3px #272727;
+
+
+    width: 300px;
+    height: 400px;
+
+    background-image: url("../../public/Images/CardBg/cardBg.jpg");
+    background-size: cover;
+    /* Set the image to cover all the div */
+    background-repeat: no-repeat;
+    /* Commonly used for that situation */
+    background-attachment: fixed;
 
 
 
     .insideOfCard {
-        background-color: orange;
-        width: 100px;
-        height: 200px;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .insideOfCardImg {
+        width: 90%;
+        height: 90%;
+
+
     }
 }

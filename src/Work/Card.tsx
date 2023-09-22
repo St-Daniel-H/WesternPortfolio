@@ -2,7 +2,7 @@ import "./Card.scss";
 import { useEffect,useState,useRef } from "react";
 import { motion, useInView, useAnimation } from "framer-motion";
 
-function Card({ section }: { section: any }) {
+function Card({ section,src }: { section: any,src:String }) {
 
      //check if section is in view
      const inView = useInView(section, { once: true });
@@ -34,8 +34,8 @@ function Card({ section }: { section: any }) {
    const [animating,setAnimating] = useState(true);
 
      // Calculate the current element's y-position based on the scroll position
-  const scrollMultiplier = 1; // Adjust this value to control the animation speed
-  const elementY = scrollPosition * scrollMultiplier;
+  const scrollMultiplier = 0.25; // Adjust this value to control the animation speed
+  const elementY = scrollPosition * scrollMultiplier ;
 
   useEffect(()=>{
     if(!animating) return;
@@ -44,7 +44,7 @@ function Card({ section }: { section: any }) {
    controls.start({
     y: `${elementY}%`,
     transition: {
-      duration: 0.3,
+      duration: 0,
     },
   });
   console.log("hi")
@@ -52,9 +52,9 @@ function Card({ section }: { section: any }) {
 
       const { x, y, width, height } = section.current.getBoundingClientRect();
       controls.start({
-        y: scrollPosition - screenHeight/2 + y  ,
-        x:-screenWidth/2 + width/2,
-        rotate:90,
+        y: -(-scrollPosition-y+400/2),
+        x:-screenWidth + width*2 ,
+        rotate:-90,
         transition:{ease:"easeIn",duration:0.5}
       })
       setAnimating(false);
@@ -67,25 +67,30 @@ function Card({ section }: { section: any }) {
   return (
     <div className="Card"
     style={{
-      width: '0',
+      width: '100%',
       height: '100vh',
       display: 'flex',
-      justifyContent: 'center',
+      justifyContent: 's',
       alignItems: 'center',
-      position: 'relative',
     }}>
 <motion.div
 className="cardMotion"
  style={{
-  width: '100px',
-  height: '100px',
-  background: 'blue',
+  borderRadius:'25px',
   position: 'absolute',
 }}
 initial={{ y: initialY}}
 animate={controls}
 >
-  <div className="insideOfCard">Card</div>
+  <div className="insideOfCard"> 
+  <div className="insideOfCardImg" style={{
+      backgroundImage: `URL(${src})`,
+      backgroundSize:"cover",
+      backgroundRepeat:"no-repeat",
+      backgroundAttachment:"fixed",
+  }}></div>
+  </div>
+ 
 </motion.div>
     </div>
   );
