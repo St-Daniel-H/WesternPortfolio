@@ -1,6 +1,5 @@
 .cardMotion {
-    right: 20px;
-    top: 150px;
+
     -webkit-box-shadow: 3px 3px 10px 3px #272727;
     -moz-box-shadow: 3px 3px 10px 3px #272727;
     box-shadow: 3px 3px 10px 3px #272727;
@@ -29,7 +28,22 @@
     .insideOfCardImg {
         width: 90%;
         height: 90%;
-
-
     }
+}
+
+.mobileCardContainer {
+    .cardMotion {
+        margin-left: 50px;
+    }
+
+    @media screen and (max-width: 550px) {
+        //  align-items: center;
+        justify-content: center;
+
+        .cardMotion {
+            margin-left: 0;
+        }
+    }
+
+
 }

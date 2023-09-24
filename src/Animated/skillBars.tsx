@@ -1,37 +1,44 @@
-import { motion } from 'framer-motion';
+import { motion,useInView,useAnimation} from 'framer-motion';
 import { useRef, useEffect, useState } from 'react';
 
 function SkillBar({ num }: { num: number }) {
   const [currentPercentage, setCurrentPercentage] = useState<number>(0);
-  const [isAnimating, setIsAnimating] = useState<boolean>(false);
 
+  const ref = useRef(null);
+  const inView = useInView(ref, { once: true });
+  const controls = useAnimation();
   const variants = {
     hidden: { width: '0%' },
     visible: {
       width: `${num}%`,
-      transition: { duration: 1, ease: 'easeIn' },
+      transition: { duration: 0.8, ease: 'easeIn',delay:0.2},
     },
   };
+  useEffect(()=>{
+    if(inView){
+      controls.start(variants.visible)
+    }
+  },[inView])
+
 
   useEffect(() => {
-    setIsAnimating(true);
     const interval = setInterval(() => {
       setCurrentPercentage((prevPercentage) => {
         const nextPercentage = prevPercentage + 1;
         if (nextPercentage >= num) {
           clearInterval(interval);
-          setIsAnimating(false);
           return num;
         }
         return nextPercentage;
       });
-    }, 10);
+    }, 20);
 
     return () => clearInterval(interval);
   }, [num]);
 
   return (
     <div
+      ref={ref}
       id="skillBar"
       style={{
         maxWidth: '800px',
@@ -51,7 +58,7 @@ function SkillBar({ num }: { num: number }) {
         }}
         variants={variants}
         initial="hidden"
-        animate="visible"
+        animate={controls}
       ></motion.div>
       <div
         style={{

@@ -1,17 +1,30 @@
 #Work {
     // margin-top: 50px;
     color: white;
-    width: 100%;
-    padding-top: 100px;
+    max-width: 100%;
     background-image: url("../../public/Images/workBg.jpg");
     background-size: cover;
     /* Set the image to cover all the div */
     background-repeat: no-repeat;
     /* Commonly used for that situation */
     background-attachment: fixed;
-    padding-left: 10px;
+    padding: 10px;
+    padding-top: 100px;
+
 
     #Introduction {
+        height: auto;
+        margin-bottom: 100px;
+
+        .flex {
+            margin-top: 20px;
+
+            h3 {
+                font-size: 20px;
+                width: 160px;
+            }
+        }
+
         width: calc(100% - 10px);
         max-width: 800px;
 
@@ -41,7 +54,7 @@
         justify-content: center;
         align-items: center;
         position: 'relative';
-        height: 100px;
+        height: 0;
     }
 
     .sections {
