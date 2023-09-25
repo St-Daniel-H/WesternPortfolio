@@ -1,7 +1,17 @@
 import { useEffect, useState } from "react";
 import { motion, useInView, useAnimation } from "framer-motion";
-
-function Card({ section, src }: { section: any; src: String }) {
+import { useNavigate } from "react-router-dom";
+function Card({
+  section,
+  src,
+  href,
+}: {
+  section: any;
+  src: String;
+  href: string;
+}) {
+  //navigation
+  const navigate = useNavigate();
   //check if section is in view
   const inView = useInView(section, { once: true });
 
@@ -66,6 +76,10 @@ function Card({ section, src }: { section: any; src: String }) {
         display: "flex",
         justifyContent: "s",
         alignItems: "center",
+      }}
+      onClick={(e) => {
+        e.preventDefault();
+        window.location.href = href;
       }}
     >
       <motion.div

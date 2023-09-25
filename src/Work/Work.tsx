@@ -18,6 +18,7 @@ function Work({
   const refSection2 = useRef(null);
   const refSection3 = useRef(null);
   const refSection4 = useRef(null);
+  const refSection5 = useRef(null);
 
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
   window.onresize = () => {
@@ -45,7 +46,7 @@ function Work({
           <br />
         </Text>
         <div className="flex">
-          <div className="flex">
+          <div className="flex" style={{ marginTop: "0" }}>
             <Text>
               <h3>HTML5</h3>
             </Text>
@@ -71,6 +72,18 @@ function Work({
               <h3>ReactJS</h3>
             </Text>
             <SkillBar num={75} />
+          </div>
+          <div className="flex">
+            <Text>
+              <h3>FramerMotion</h3>
+            </Text>
+            <SkillBar num={80} />
+          </div>
+          <div className="flex">
+            <Text>
+              <h3>ReactMUI</h3>
+            </Text>
+            <SkillBar num={85} />
           </div>
 
           <div className="flex">
@@ -108,24 +121,35 @@ function Work({
             {/* <div id="contain"> */}
             <Card
               key="1"
-              src={"../../public/Images/Projects/Project1.jpg"}
-              section={refSection4}
+              src={"../../public/Images/Projects/Project5.jpg"}
+              section={refSection5}
+              href="https://github.com/St-Daniel-H/WeatherApp"
             />
             <Card
               key="2"
-              src={"../../public/Images/Projects/Project1.jpg"}
-              section={refSection3}
+              src={"../../public/Images/Projects/Project4.jpg"}
+              section={refSection4}
+              href="https://github.com/St-Daniel-H/WesternPortfolio"
             />
             <Card
               key="3"
-              src={"../../public/Images/Projects/Project1.jpg"}
-              section={refSection2}
+              src={"../../public/Images/Projects/Project3.jpg"}
+              section={refSection3}
+              href="https://github.com/St-Daniel-H/UniProject"
             />
             <Card
               key="4"
+              src={"../../public/Images/Projects/Project2.jpg"}
+              section={refSection2}
+              href="https://github.com/St-Daniel-H/SocialNetwork"
+            />
+            <Card
+              key="5"
               src={"../../public/Images/Projects/Project1.jpg"}
               section={refSection1}
+              href="https://github.com/St-Daniel-H/BookingSystem"
             />
+
             {/* </div> */}
           </AnimatePresence>
         </div>
@@ -146,31 +170,158 @@ function Work({
             <MobileCard src="../../public/Images/Projects/Project1.jpg" />
           </Text>
         )}
+        <div
+          style={{
+            marginTop: !condition ? "400px" : "270px",
+          }}
+        >
+          <Text>
+            Web application for companies to manage their meeting schedules{" "}
+            <br />
+            <ul></ul>
+            <li>
+              <b>Frontend</b>: ReactJS, reactMUI,SCSS
+            </li>
+            <li>
+              <b>Backend</b>: asp.net core
+            </li>
+            <li>
+              <b>Database</b>: SQL server manager
+            </li>
+          </Text>
+        </div>
       </WorkSection>
-      <div className="sections">
-        <h1>section2</h1>
+      <WorkSection>
+        <Text>
+          <h1>Social Network</h1>
+        </Text>
+        {condition ? (
+          <div
+            className="imgSpot"
+            ref={refSection2}
+            style={{ height: "50px", width: "200px" }}
+          ></div>
+        ) : (
+          <Text>
+            <MobileCard src="../../public/Images/Projects/Project2.jpg" />
+          </Text>
+        )}
         <div
-          className="imgSpot"
-          ref={refSection2}
-          style={{ height: "50px", width: "200px" }}
-        ></div>
-      </div>
-      <div className="sections">
-        <h1>section3</h1>
+          style={{
+            marginTop: !condition ? "400px" : "270px",
+          }}
+        >
+          <Text>
+            Web application for users to Post, interact with posts by comments,
+            liking/disliking and connect with each other <br />
+            <ul></ul>
+            <li>
+              <b>Frontend</b>: ReactJS, reactMUI, Redux,SCSS
+            </li>
+            <li>
+              <b>Backend</b>: ExpressJS
+            </li>
+            <li>
+              <b>Database</b>: MongoDB
+            </li>
+          </Text>
+        </div>
+      </WorkSection>
+      <WorkSection>
+        <Text>
+          <h1>Club House</h1>
+        </Text>
+        {condition ? (
+          <div
+            className="imgSpot"
+            ref={refSection3}
+            style={{ height: "50px", width: "200px" }}
+          ></div>
+        ) : (
+          <Text>
+            <MobileCard src="../../public/Images/Projects/Project3.jpg" />
+          </Text>
+        )}
         <div
-          className="imgSpot"
-          ref={refSection3}
-          style={{ height: "50px", width: "200px" }}
-        ></div>
-      </div>
-      <div className="sections">
-        <h1>section4</h1>
+          style={{
+            marginTop: !condition ? "400px" : "270px",
+          }}
+        >
+          <Text>
+            Front end website similar to google classrooms <br />
+            <ul></ul>
+            <li>
+              <b>Frontend</b>: HTML5,CSS3,Javascript, Bootstrap
+            </li>
+            <b>Live Preveiw: </b>
+            <a href="https://st-daniel-h.github.io/UniProject/Pages/mainPage/index.html">
+              {" "}
+              here
+            </a>
+          </Text>
+        </div>
+      </WorkSection>
+
+      <WorkSection>
+        <Text>
+          <h1>Weather app</h1>
+        </Text>
+        {condition ? (
+          <div
+            className="imgSpot"
+            ref={refSection5}
+            style={{ height: "50px", width: "200px" }}
+          ></div>
+        ) : (
+          <Text>
+            <MobileCard src="../../public/Images/Projects/Project5.jpg" />
+          </Text>
+        )}
         <div
-          className="imgSpot"
-          ref={refSection4}
-          style={{ height: "50px", width: "200px" }}
-        ></div>
-      </div>
+          style={{
+            marginTop: !condition ? "400px" : "270px",
+          }}
+        >
+          <Text>
+            Weather application that integrates with weather APIs <br />
+            <ul></ul>
+            <li>
+              <b>Frontend</b>: HTML5,CSS,Javascript
+            </li>
+            <b>Live preview</b>:
+            <a href="https://st-daniel-h.github.io/WeatherApp/">here</a>
+          </Text>
+        </div>
+      </WorkSection>
+      <WorkSection>
+        <Text>
+          <h1>Portfolio Website</h1>
+        </Text>
+        {condition ? (
+          <div
+            className="imgSpot"
+            ref={refSection4}
+            style={{ height: "50px", width: "200px" }}
+          ></div>
+        ) : (
+          <Text>
+            <MobileCard src="../../public/Images/Projects/Project4.jpg" />
+          </Text>
+        )}
+        <div
+          style={{
+            marginTop: !condition ? "400px" : "270px",
+          }}
+        >
+          <Text>
+            Static website to show my skillset <br />
+            <ul></ul>
+            <li>
+              <b>Frontend</b>: React,Typescript,Framer-Motion,SCSS,
+            </li>
+          </Text>
+        </div>
+      </WorkSection>
     </div>
   );
 }

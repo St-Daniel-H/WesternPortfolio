@@ -9,11 +9,11 @@
     height: 400px;
 
     background-image: url("../../public/Images/CardBg/cardBg.jpg");
-    background-size: cover;
-    /* Set the image to cover all the div */
+    background-size: cover;    /* Set the image to cover the entire div */
     background-repeat: no-repeat;
-    /* Commonly used for that situation */
+    /* Prevent image repetition */
     background-attachment: fixed;
+    /* Keep the background fixed even when scrolling */
 
 
 
