@@ -1,0 +1,70 @@
+#Contact {
+    background-color: blue;
+    // padding-top: 100px;
+    min-height: 100vh;
+    width: 100%;
+
+    background-image: url('../../public/Images/Backgrounds/ContactBg.png');
+    background-size: cover;
+    /* Set the image to cover all the div */
+    background-repeat: no-repeat;
+    /* Commonly used for that situation */
+    background-attachment: fixed;
+
+    display: flex;
+    //align-items: center;
+    justify-content: center;
+
+
+    form {
+        hr {
+            border: 0;
+            border-top: 1px solid #000000;
+        }
+
+        background-image: url(../../public/Images/Backgrounds/contactFormBg.jpg);
+        -webkit-box-shadow: 3px 3px 10px 3px #111111;
+        -moz-box-shadow: 3px 3px 10px 3px #111111;
+        box-shadow: 3px 3px 10px 3px #111111;
+        color: black;
+        margin: 10px;
+        margin-top: 150px;
+        border-radius: 25px;
+        height: 460px;
+        display: block;
+        padding: 10px;
+        width: 100%;
+        max-width: 600px;
+        font-size: 25px;
+
+        input,
+        textarea,
+        button {
+            font-size: 30px;
+            height: 40px;
+            width: 100%;
+            resize: none;
+            background: none;
+            border: none;
+            outline: none;
+        }
+
+        button {
+            width: 100px;
+            float: right;
+            border: 2px solid black;
+
+            &:hover {
+                cursor: none;
+            }
+        }
+
+        textarea {
+            border: none;
+
+            height: 100px;
+        }
+
+
+    }
+}

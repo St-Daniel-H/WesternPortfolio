@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { motion, useInView, useAnimation } from "framer-motion";
-import { useNavigate } from "react-router-dom";
 function Card({
   section,
   src,
@@ -11,7 +10,6 @@ function Card({
   href: string;
 }) {
   //navigation
-  const navigate = useNavigate();
   //check if section is in view
   const inView = useInView(section, { once: true });
 
@@ -50,7 +48,7 @@ function Card({
       controls.start({
         y: `${elementY}%`,
         transition: {
-          duration: 0,
+          duration: 0.1,
         },
       });
     } else {

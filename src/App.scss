@@ -8,7 +8,24 @@
     overflow-x: hidden;
     color: white;
 
+    * {
+        font-family: "Rye",
+            sans-serif;
+    }
+
     a:hover {
+        cursor: none;
+    }
+
+    input:hover {
+        cursor: none;
+    }
+
+    textarea:hover {
+        cursor: none;
+    }
+
+    label:hover {
         cursor: none;
     }
 }

@@ -1,5 +1,5 @@
-import { motion,useInView,useAnimation} from 'framer-motion';
-import { useRef, useEffect, useState } from 'react';
+import { motion, useInView, useAnimation } from "framer-motion";
+import { useRef, useEffect, useState } from "react";
 
 function SkillBar({ num }: { num: number }) {
   const [currentPercentage, setCurrentPercentage] = useState<number>(0);
@@ -8,18 +8,17 @@ function SkillBar({ num }: { num: number }) {
   const inView = useInView(ref, { once: true });
   const controls = useAnimation();
   const variants = {
-    hidden: { width: '0%' },
+    hidden: { width: "0%" },
     visible: {
       width: `${num}%`,
-      transition: { duration: 0.8, ease: 'easeIn',delay:0.2},
+      transition: { duration: 0.8, ease: "easeIn", delay: 0.2 },
     },
   };
-  useEffect(()=>{
-    if(inView){
-      controls.start(variants.visible)
+  useEffect(() => {
+    if (inView) {
+      controls.start(variants.visible);
     }
-  },[inView])
-
+  }, [inView]);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -41,20 +40,21 @@ function SkillBar({ num }: { num: number }) {
       ref={ref}
       id="skillBar"
       style={{
-        maxWidth: '800px',
-        width:"100%",
-        backgroundColor: 'white',
-        height: '15px',
-        borderRadius: '25px',
-        position: 'relative',
-        boxShadow:'3px 3px 10px 3px #272727',
+        maxWidth: "800px",
+        width: "100%",
+        backgroundColor: "white",
+        height: "15px",
+        borderRadius: "25px",
+        position: "relative",
+        boxShadow: "3px 3px 10px 3px #272727",
       }}
     >
       <motion.div
         style={{
-            backgroundImage:'URL("../../public/Images/NavbarBG.jpg")',
-          height: '100%',
-          borderRadius: '25px',
+          backgroundImage:
+            'URL("../../public/Images/Backgrounds/NavbarBG.jpg")',
+          height: "100%",
+          borderRadius: "25px",
         }}
         variants={variants}
         initial="hidden"
@@ -62,11 +62,11 @@ function SkillBar({ num }: { num: number }) {
       ></motion.div>
       <div
         style={{
-          position: 'absolute',
-          top: '50%',
-          left: '50%',
-          transform: 'translate(-50%,-50%)',
-          color: 'white',
+          position: "absolute",
+          top: "50%",
+          left: "50%",
+          transform: "translate(-50%,-50%)",
+          color: "white",
         }}
       >
         <p>{currentPercentage}%</p>

@@ -1,6 +1,7 @@
 export default interface ICursorFunctions {
-    cursorShoot: () => void;
-    cursorFire: () => void;
-    cursorDefault: () => void;
-    cursorAim: () => void;
-  }
+  cursorShoot: () => void;
+  cursorFire: () => void;
+  cursorDefault: () => void;
+  cursorAim: () => void;
+  cursorInput: () => void;
+}

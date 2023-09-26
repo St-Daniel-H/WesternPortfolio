@@ -119,17 +119,18 @@ function Work({
         <div id="deckContainer">
           <AnimatePresence>
             {/* <div id="contain"> */}
-            <Card
-              key="1"
-              src={"../../public/Images/Projects/Project5.jpg"}
-              section={refSection5}
-              href="https://github.com/St-Daniel-H/WeatherApp"
-            />
+
             <Card
               key="2"
               src={"../../public/Images/Projects/Project4.jpg"}
               section={refSection4}
               href="https://github.com/St-Daniel-H/WesternPortfolio"
+            />
+            <Card
+              key="1"
+              src={"../../public/Images/Projects/Project5.jpg"}
+              section={refSection5}
+              href="https://github.com/St-Daniel-H/WeatherApp"
             />
             <Card
               key="3"
