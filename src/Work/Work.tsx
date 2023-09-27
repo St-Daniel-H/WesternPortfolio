@@ -1,4 +1,3 @@
-import IOverlay from "../Interface/Overlay.tsx";
 import "./Work.scss";
 import { AnimatePresence } from "framer-motion";
 import { useState, useEffect, useRef } from "react";
@@ -8,12 +7,7 @@ import SkillBar from "../Animated/skillBars.tsx";
 import WorkSection from "./workSection.tsx";
 import "./Card.scss";
 import MobileCard from "./mobileCard.tsx";
-function Work({
-  showOverlay,
-  setIsOverlayVisible,
-  isOverlayVisible,
-  cursorFunctions,
-}: IOverlay) {
+function Work() {
   const refSection1 = useRef(null);
   const refSection2 = useRef(null);
   const refSection3 = useRef(null);
@@ -114,6 +108,12 @@ function Work({
             <SkillBar num={80} />
           </div>
         </div>
+      </div>
+      <div>
+        <h1>
+          Check out more of my work here:
+          <br /> https://github.com/St-Daniel-H
+        </h1>
       </div>
       {condition && (
         <div id="deckContainer">

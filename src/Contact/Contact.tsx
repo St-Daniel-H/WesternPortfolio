@@ -3,7 +3,6 @@ import { useForm, SubmitHandler } from "react-hook-form";
 import ICursorFunctions from "../Interface/ICursorFunctions";
 import { useState } from "react";
 import "./Contact.scss";
-import dotenv from "dotenv";
 
 type Inputs = {
   name_from: string;
@@ -29,16 +28,11 @@ const publicKey = import.meta.env.VITE_PUBLIC_KEY || "null";
 const serviceId = import.meta.env.VITE_SERVICE_ID || "null";
 const templateId = import.meta.env.VITE_TEMPLATE_ID || "null";
 function Contact({ cursorFunctions }: { cursorFunctions: ICursorFunctions }) {
-  const {
-    register,
-    handleSubmit,
-    watch,
-    formState: { errors },
-  } = useForm<Inputs>();
+  const { register, handleSubmit } = useForm<Inputs>();
   const onSubmit: SubmitHandler<Inputs> = (data) => {
     console.log(JSON.stringify(data));
     setLoading(true);
-    if (!sent) {
+    if (!sent && !loading) {
       emailjs.send(serviceId, templateId, data, publicKey).then(
         function (response) {
           console.log("SUCCESS!", response.status, response.text);
@@ -49,6 +43,8 @@ function Contact({ cursorFunctions }: { cursorFunctions: ICursorFunctions }) {
           console.log("FAILED...", error);
         }
       );
+    } else {
+      alert("Please wait 3 hours to send another message");
     }
     setLoading(false);
   };
@@ -114,7 +110,7 @@ function Contact({ cursorFunctions }: { cursorFunctions: ICursorFunctions }) {
             onMouseOver={cursorFunctions.cursorAim}
             onMouseLeave={cursorFunctions.cursorDefault}
           >
-            {!loading && !sent ? "Send" : !loading && sent ? "Sent" : "Send"}
+            {loading ? "Loading" : !loading && !sent ? "Send" : "Sent"}
           </button>
         </div>
       </form>
