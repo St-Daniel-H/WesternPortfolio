@@ -4,7 +4,7 @@ import IOverlay from "../Interface/Overlay.tsx";
 import Text from "../Animated/text.tsx";
 function Main({
   showOverlay,
-  setIsOverlayVisible,
+  //setIsOverlayVisible,
   isOverlayVisible,
   cursorFunctions,
 }: IOverlay) {
