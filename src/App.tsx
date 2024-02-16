@@ -19,7 +19,7 @@ function App() {
     }, 1000); // Adjust the delay duration as needed
   };
   //cursor stuff
-  const audio = new Audio("../../public/Sound/shoot.mp3");
+  const audio = new Audio("./Sound/shoot.mp3");
   const [cursorStyle, setCursorStyle] = useState(cursor.defaultCursor); // Initialize with the default cursor
   const cursorFunctions = {
     cursorAim: function cursorAim() {
