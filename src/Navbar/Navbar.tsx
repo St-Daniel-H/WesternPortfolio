@@ -12,7 +12,7 @@ function Navbar({
   }
   return (
     <div id="Nav">
-      <img src="../../public/Images/cursor.png"></img>
+      <img src="./Images/cursor.png"></img>
       <div id="links">
         <NavbarTarget
           isOverlayVisible={isOverlayVisible}
