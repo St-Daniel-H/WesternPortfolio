@@ -8,6 +8,9 @@ function Main({
   isOverlayVisible,
   cursorFunctions,
 }: IOverlay) {
+  if (false) {
+    setIsOverlayVisible(true);
+  }
   return (
     <div id="Main">
       <div id="Introduction">

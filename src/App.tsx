@@ -83,10 +83,10 @@ function App() {
           path="/Work"
           element={
             <Work
-              isOverlayVisible={isOverlayVisible}
-              setIsOverlayVisible={setIsOverlayVisible}
-              cursorFunctions={cursorFunctions}
-              showOverlay={showOverlay}
+            //  isOverlayVisible={isOverlayVisible}
+            // setIsOverlayVisible={setIsOverlayVisible}
+            // cursorFunctions={cursorFunctions}
+            // showOverlay={showOverlay}
             />
           }
         />
