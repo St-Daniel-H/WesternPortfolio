@@ -122,31 +122,31 @@ function Work() {
 
             <Card
               key="2"
-              src={"../../public/Images/Projects/Project4.jpg"}
+              src={"../../dist/public/Images/Projects/Project4.jpg"}
               section={refSection4}
               href="https://github.com/St-Daniel-H/WesternPortfolio"
             />
             <Card
               key="1"
-              src={"../../public/Images/Projects/Project5.jpg"}
+              src={"../../dist/public/Images/Projects/Project5.jpg"}
               section={refSection5}
               href="https://github.com/St-Daniel-H/WeatherApp"
             />
             <Card
               key="3"
-              src={"../../public/Images/Projects/Project3.jpg"}
+              src={"../../dist/public/Images/Projects/Project3.jpg"}
               section={refSection3}
               href="https://github.com/St-Daniel-H/UniProject"
             />
             <Card
               key="4"
-              src={"../../public/Images/Projects/Project2.jpg"}
+              src={"../../dist/public/Images/Projects/Project2.jpg"}
               section={refSection2}
               href="https://github.com/St-Daniel-H/SocialNetwork"
             />
             <Card
               key="5"
-              src={"../../public/Images/Projects/Project1.jpg"}
+              src={"../../dist/public/Images/Projects/Project1.jpg"}
               section={refSection1}
               href="https://github.com/St-Daniel-H/BookingSystem"
             />
@@ -168,7 +168,7 @@ function Work() {
           ></div>
         ) : (
           <Text>
-            <MobileCard src="../../public/Images/Projects/Project1.jpg" />
+            <MobileCard src="../../dist/public/Images/Projects/Project1.jpg" />
           </Text>
         )}
         <div
@@ -204,7 +204,7 @@ function Work() {
           ></div>
         ) : (
           <Text>
-            <MobileCard src="../../public/Images/Projects/Project2.jpg" />
+            <MobileCard src="../../dist/public/Images/Projects/Project2.jpg" />
           </Text>
         )}
         <div
@@ -240,7 +240,7 @@ function Work() {
           ></div>
         ) : (
           <Text>
-            <MobileCard src="../../public/Images/Projects/Project3.jpg" />
+            <MobileCard src="../../dist/public/Images/Projects/Project3.jpg" />
           </Text>
         )}
         <div
@@ -275,7 +275,7 @@ function Work() {
           ></div>
         ) : (
           <Text>
-            <MobileCard src="../../public/Images/Projects/Project5.jpg" />
+            <MobileCard src="../../dist/public/Images/Projects/Project5.jpg" />
           </Text>
         )}
         <div
@@ -306,7 +306,7 @@ function Work() {
           ></div>
         ) : (
           <Text>
-            <MobileCard src="../../public/Images/Projects/Project4.jpg" />
+            <MobileCard src="../../dist/public/Images/Projects/Project4.jpg" />
           </Text>
         )}
         <div
